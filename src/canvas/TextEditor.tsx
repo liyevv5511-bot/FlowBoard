@@ -19,11 +19,20 @@ export function TextEditor({ shape, viewport, onCommit, onCancel }: TextEditorPr
   const ref = useRef<HTMLTextAreaElement>(null);
 
   // Açılan kimi fokuslanıb mövcud mətni seçirik.
+  //
+  // Fokusu bir kadr təxirə salırıq (requestAnimationFrame): forma klik ilə
+  // yaradıldıqda bu useEffect hələ mousedown/click ardıcıllığının içindədir və
+  // brauzer klik tamamlananda fokusu kətana geri qaytararaq textarea-nı dərhal
+  // "blur" edərdi (redaktor açılan kimi bağlanardı). Növbəti kadrda fokuslamaq
+  // klik bitdikdən sonra baş verir və fokus sabit qalır.
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    el.focus();
-    el.select();
+    const raf = requestAnimationFrame(() => {
+      const el = ref.current;
+      if (!el) return;
+      el.focus();
+      el.select();
+    });
+    return () => cancelAnimationFrame(raf);
   }, []);
 
   const screen = worldToScreen({ x: shape.x, y: shape.y }, viewport);
