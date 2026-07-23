@@ -23,15 +23,19 @@ rendered on a hardware-accelerated `<canvas>`.
 
 ## 📸 Demo
 
-> _Placeholder — replace with your own captures._
+**🔗 [Try the live app →](https://flow-board-puce.vercel.app/)**
 
-|                       Drawing & editing                       |                    Real-time collaboration                    |
-| :-----------------------------------------------------------: | :-----------------------------------------------------------: |
-| ![Drawing demo](docs/demo-drawing.gif) <br> _`docs/demo-drawing.gif`_ | ![Collaboration demo](docs/demo-collab.gif) <br> _`docs/demo-collab.gif`_ |
+### Light theme
 
-|                    Light theme                     |                     Dark theme                     |
-| :------------------------------------------------: | :------------------------------------------------: |
-| ![Light](docs/screenshot-light.png) <br> _`docs/screenshot-light.png`_ | ![Dark](docs/screenshot-dark.png) <br> _`docs/screenshot-dark.png`_ |
+![FlowBoard — light theme](docs/screenshot-light.png)
+
+### Dark theme
+
+![FlowBoard — dark theme](docs/screenshot-dark.png)
+
+> 💡 _Tip: for an even richer showcase, record a short screen capture of two
+> windows editing the same room and drop a `docs/demo-collab.gif` in here to
+> show the live cursors and real-time sync._
 
 ---
 
