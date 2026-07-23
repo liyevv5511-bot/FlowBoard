@@ -2,10 +2,18 @@
 
 > A real-time, multiplayer, infinite-canvas whiteboard — a lightweight Excalidraw / Miro clone built with React, TypeScript, Yjs (CRDT) and Konva.
 
+<p align="center">
+  <a href="https://flow-board-puce.vercel.app/">
+    <img src="https://img.shields.io/badge/Live_Demo-flow--board--puce.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+  </a>
+</p>
+
 FlowBoard lets several people draw, add shapes, text and sticky notes, and see
 each other's live cursors on the same infinite canvas. State is synchronised
 peer-to-peer with **conflict-free CRDTs**, persisted offline in the browser, and
 rendered on a hardware-accelerated `<canvas>`.
+
+**🔗 Try it live:** **[flow-board-puce.vercel.app](https://flow-board-puce.vercel.app/)** — open it in two browser windows (or share the room URL) to see real-time collaboration in action.
 
 <p align="center">
   <em>Built as a portfolio piece to demonstrate real-time systems, CRDT data modelling, and clean front-end architecture.</em>
