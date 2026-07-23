@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Tema tokenları CSS dəyişənləri kimi saxlanır (RGB kanalları — Tailwind-in
+ * `<alpha-value>` sintaksisi üçün boşluqla ayrılmış). `.dark` sinfi <html>-ə
+ * əlavə edildikdə (useUIStore) bütün rənglər anında dəyişir.
+ */
+:root {
+  --surface: 255 255 255;
+  --surface-2: 244 244 245;
+  --border: 228 228 231;
+  --content: 24 24 27;
+  --content-muted: 113 113 122;
+  --accent: 99 102 241;
+  --accent-hover: 79 70 229;
+  --grid-color: 212 212 216;
+}
+
+.dark {
+  --surface: 24 24 27;
+  --surface-2: 9 9 11;
+  --border: 39 39 42;
+  --content: 244 244 245;
+  --content-muted: 161 161 170;
+  --accent: 129 140 248;
+  --accent-hover: 99 102 241;
+  --grid-color: 39 39 42;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Sonsuz kətan üçün incə nöqtəli tor fonu. */
+.board-grid {
+  background-color: rgb(var(--surface-2));
+  background-image: radial-gradient(circle, rgb(var(--grid-color)) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
